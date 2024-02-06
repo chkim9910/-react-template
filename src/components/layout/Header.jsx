@@ -41,7 +41,7 @@ const Header = () => {
   const HandleScroll = () => {
     const scrollY = window.scrollY;
     const hd = document.querySelector("#header");
-    const nvBelt = document.querySelector(".nav-belt__wrapper");
+    const nvBar = document.querySelector(".nav-bar__wrapper");
     const hdHeight = hd.offsetHeight;
     const swiperHeight = document.querySelector(".topCont")?.offsetHeight || 0;
     // ||(or 연산자): swiperHeight가 없으면 0을 넣어줌
@@ -55,8 +55,8 @@ const Header = () => {
           color: "#222",
           duration: 0.5,
         });
-        gsap.to(nvBelt, {
-          boxShadow: "0 1px 4px 0 rgba(0,0,0,.07);",
+        gsap.to(nvBar, {
+          boxShadow: "0 1px 4px 0 rgba(0,0,0,.07)",
         });
       } else {
         gsap.to(hd, { background: "rgba(0,0,0, 0.2)" });
