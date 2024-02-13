@@ -1,4 +1,5 @@
 import { UnorderedList, ListItem } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Gnb = () => {
@@ -10,19 +11,29 @@ const Gnb = () => {
       color={"white"}
     >
       <ListItem>
-        <Link to="/">Main Dashboard</Link>
+        <Link as={ReactRouterLink} to="/">
+          Main Dashboard
+        </Link>
       </ListItem>
       <ListItem>
-        <Link to="/marketplace">NFT Marketplace</Link>
+        <Link as={ReactRouterLink} to="/marketplace">
+          NFT Marketplace
+        </Link>
       </ListItem>
       <ListItem>
-        <Link to="/datatables">Data Tables</Link>
+        <Link as={ReactRouterLink} to="/datatables">
+          Data Tables
+        </Link>
       </ListItem>
       <ListItem>
-        <Link to="/profile">Profile</Link>
+        <Link as={ReactRouterLink} to="/profile">
+          Profile
+        </Link>
       </ListItem>
       <ListItem>
-        <Link to="/signin">Sign In</Link>
+        <Link as={ReactRouterLink} to="/signin">
+          Sign In
+        </Link>
       </ListItem>
     </UnorderedList>
   );
